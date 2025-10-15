@@ -42,7 +42,7 @@ manzana_x, manzana_y = pos_manzana_alaeatoria()
 
 # Puntaje y estado de juego 
 puntaje = 0 
-META = 10
+META = 15
 ganaste = False
 
 pygame.mixer.init()
@@ -94,7 +94,7 @@ def dibujar_escena():
     pygame.draw.circle(PANTALLA, (255,120, 120), (manzana_x - 5, manzana_y - 5), max(6, R // 3))
     
     if ganaste: 
-        msg = font_h1.render("¡GANASTE! 🎉", True, ROJO)
+        msg = font_h1.render("¡GG!", True, ROJO)
         sub = font_p.render("Pulsa R para jugar de nuevo o Esc para salir", True, NEGRO)
         PANTALLA.blit(msg, ((ANCHO - msg.get_width()) // 2, ALTO // 2 - 50))
         PANTALLA.blit(sub, ((ANCHO - sub.get_width()) // 2, ALTO // 2 + 50))
